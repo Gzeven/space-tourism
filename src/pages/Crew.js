@@ -206,7 +206,7 @@ const Wrapper = styled(motion.section)`
     background-position: center;
 
     .grid-container--crew {
-      padding-bottom: 0;
+      /* padding-bottom: 0; */
       grid-template-areas:
         'title'
         'content'
