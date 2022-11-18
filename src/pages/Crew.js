@@ -152,7 +152,7 @@ const Wrapper = styled(motion.section)`
   background: url(${CrewBackgroundMobile});
   background-size: cover;
   background-position: center;
-  height: 100%;
+  height: 100vh;
 
   .grid-container--crew {
     height: 100%;
