@@ -144,7 +144,6 @@ const Wrapper = styled(motion.section)`
     background: url(${HomeBackgroundDesktop});
     background-size: cover;
     background-position: center;
-    height: 100vh;
 
     .grid-container--home {
       padding-top: 6rem;

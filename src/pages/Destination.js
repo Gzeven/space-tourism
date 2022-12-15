@@ -279,7 +279,6 @@ const Wrapper = styled(motion.section)`
     background: url(${DestinationBackgroundDesktop});
     background-size: cover;
     background-position: center;
-    height: 100vh;
 
     .grid-container--destination {
       align-content: start;
