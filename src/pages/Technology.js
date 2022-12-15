@@ -254,6 +254,7 @@ const Wrapper = styled(motion.section)`
     background: url(${TechnologyBackgroundDesktop});
     background-size: cover;
     background-position: center;
+    height: 100vh;
 
     .grid-container--technology {
       align-content: start;
