@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTabState, Tab, TabList } from 'reakit/Tab';
-import { useSwipeable } from 'react-swipeable';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import {
@@ -72,15 +71,6 @@ const Technology = ({ technology }) => {
     window.addEventListener('resize', handleResize);
   });
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () => {
-      setPage([setPage - 1]);
-    },
-    onSwipedRight: () => {
-      setPage([setPage + 1]);
-    },
-  });
-
   return (
     <Wrapper>
       <Navbar />
@@ -106,7 +96,6 @@ const Technology = ({ technology }) => {
               return (
                 <Tab
                   {...tab}
-                  {...handlers}
                   key={i}
                   className={
                     isActive ? 'active-header list-buttons ' : 'list-buttons'
