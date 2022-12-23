@@ -181,7 +181,7 @@ const Wrapper = styled(motion.section)`
   background: url(${DestinationBackgroundMobile});
   background-size: cover;
   background-position: center;
-  /* height: 100vh; */
+  height: 100%;
 
   .destination-meta {
     p {

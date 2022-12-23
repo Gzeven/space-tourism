@@ -55,7 +55,6 @@ const imageVariants = {
 const Technology = ({ technology }) => {
   const [mobile, setMobile] = useState('horizontal');
 
-  const position = mobile;
   const [[page, direction], setPage] = useState([0, 0]);
   const tab = useTabState({ orientation: mobile });
 
@@ -113,7 +112,7 @@ const Technology = ({ technology }) => {
             })}
           </TabList>
 
-          <AnimatePresence initial={false} exitBeforeEnter>
+          <AnimatePresence initial={false} exitBeforeEnter custom={direction}>
             <motion.section
               className="content"
               key={page}
@@ -136,7 +135,7 @@ const Technology = ({ technology }) => {
             </motion.section>
           </AnimatePresence>
 
-          <AnimatePresence initial={false} exitBeforeEnter>
+          <AnimatePresence initial={false} exitBeforeEnter custom={direction}>
             <motion.picture
               className="image"
               key={page}
@@ -176,7 +175,7 @@ const Wrapper = styled(motion.section)`
   background: url(${TechnologyBackgroundMobile});
   background-size: cover;
   background-position: center;
-  /* height: 100vh; */
+  height: 100%;
 
   .grid-container {
     padding-inline: 0;

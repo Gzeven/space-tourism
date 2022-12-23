@@ -68,16 +68,11 @@ Reset
 
 html,
 body {
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 100%;
 }
 
-html {
-  height: 100%
-}
- 
-body {
-  min-height: 100%
-}
+
 
 /* Reset margins */
 body,
@@ -199,8 +194,8 @@ Utility classes
   display: grid;
   place-items: center;
   padding-bottom: 5rem;
-  /* height: 100%; */
-  height: 100vh;
+  height: 100%;
+  /* height: 100vh; */
 }
 
 .grid-container p:not([class]) {
