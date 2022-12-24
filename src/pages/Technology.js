@@ -175,7 +175,7 @@ const Wrapper = styled(motion.section)`
   background: url(${TechnologyBackgroundMobile});
   background-size: cover;
   background-position: center;
-  height: 100%;
+  min-height: 100vh;
 
   .grid-container {
     padding-inline: 0;

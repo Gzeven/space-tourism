@@ -68,8 +68,8 @@ Reset
 
 html,
 body {
-  overflow: hidden;
-  height: 100%;
+  overflow-x: hidden;
+  
 }
 
 
@@ -134,7 +134,7 @@ body {
   font-size: var(--fs-400);
   color: hsl(var(--clr-white));
   line-height: 1.5;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr;
   overflow-x: hidden;

@@ -67,7 +67,7 @@ const Wrapper = styled(motion.section)`
   background: url(${HomeBackgroundMobile});
   background-size: cover;
   background-position: center;
-  /* height: 100vh; */
+  min-height: 100vh;
 
   h1 > span {
     margin: 1.5rem 0;
