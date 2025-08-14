@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Home, Destination, Crew, Technology, Error } from './pages';
 import styled from 'styled-components';
 import { data } from '../src/assets/data';
-import Navbar from './components/Navbar';
+
 
 function App() {
   const location = useLocation();

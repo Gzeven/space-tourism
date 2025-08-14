@@ -135,36 +135,41 @@ const Technology = ({ technology }) => {
             </motion.section>
           </AnimatePresence>
 
-          <AnimatePresence initial={false} exitBeforeEnter custom={direction}>
-            <motion.picture
-              className="image"
-              key={page}
-              variants={imageVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: {
-                  type: 'spring',
-                  stiffness: 300,
-                  damping: 30,
-                  duration: 2,
-                },
-                opacity: { duration: 0.2 },
-              }}
-            >
-              <img
-                src={technology[page].images.portrait}
-                className="portrait"
-                alt={technology[page].name}
-              />
-              <img
-                src={technology[page].images.landscape}
-                className="landscape"
-                alt={technology[page].name}
-              />
-            </motion.picture>
-          </AnimatePresence>
+         <AnimatePresence exitBeforeEnter custom={direction}>
+  <motion.div
+    key={page} // key changes on tab switch
+    variants={imageVariants}
+    initial="enter"
+    animate="center"
+    exit="exit"
+    transition={{
+      x: { type: 'spring', stiffness: 300, damping: 30 },
+      opacity: { duration: 0.2 },
+    }}
+    className="image-wrapper"
+  >
+    <picture className="image">
+      <motion.img
+        src={technology[page].images.portrait}
+        className="portrait"
+        alt={technology[page].name}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4 }}
+      />
+      <motion.img
+        src={technology[page].images.landscape}
+        className="landscape"
+        alt={technology[page].name}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4 }}
+      />
+    </picture>
+  </motion.div>
+</AnimatePresence>
         </div>
       </motion.section>
     </Wrapper>

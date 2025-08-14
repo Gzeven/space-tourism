@@ -39,24 +39,21 @@ function Navbar() {
           }
           id="primary-navigation"
         >
-          {NAVBAR_ROUTES.map(({ exact, path, name, classname }, index) => {
-            return (
-              <Link
-                to={path}
-                className={splitLocation[1] === classname ? 'active' : ''}
-                key={name}
-              >
-                <button
-                  className="navlink uppercase letter-spacing-2 ff-sans-cond nav-text text-white  "
-                  exact={`${exact}`}
-                  onClick={() => setShowLinks(!showLinks)}
-                >
-                  <span aria-hidden="true">0{index}</span>
-                  {name}
-                </button>
-              </Link>
-            );
-          })}
+      {NAVBAR_ROUTES.map(({ exact, path, name, classname }, index) => {
+  return (
+    <Link
+      to={path}
+      className={`navlink uppercase letter-spacing-2 ff-sans-cond nav-text text-white ${
+        splitLocation[1] === classname ? 'active' : ''
+      }`}
+      key={name}
+      onClick={() => setShowLinks(false)}
+    >
+      <span className="nav-number" aria-hidden="true">0{index}</span>
+      {name}
+    </Link>
+  );
+})}
         </ul>
       </nav>
     </NavContainer>
@@ -153,6 +150,11 @@ const NavContainer = styled.nav`
     transform: translateX(100%);
   }
 
+  .nav-number {
+  font-weight: 700;
+  margin-right: 12px;
+  }
+
   .change {
     .bar1 {
       transform: rotate(-45deg) translate(-2px, 10px);
@@ -236,3 +238,4 @@ const NavContainer = styled.nav`
 `;
 
 export default Navbar;
+
