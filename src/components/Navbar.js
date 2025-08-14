@@ -31,30 +31,30 @@ function Navbar() {
         <div className="bar3"></div>
       </button>
       <nav>
-        <ul
-          className={
-            showLinks
-              ? 'primary-navigation flex nav-indicators'
-              : ' close-primary-navigation primary-navigation flex nav-indicators'
-          }
-          id="primary-navigation"
-        >
-      {NAVBAR_ROUTES.map(({ exact, path, name, classname }, index) => {
-  return (
-    <Link
-      to={path}
-      className={`navlink uppercase letter-spacing-2 ff-sans-cond nav-text text-white ${
-        splitLocation[1] === classname ? 'active' : ''
-      }`}
+<ul
+  className={
+    showLinks
+      ? 'primary-navigation flex nav-indicators'
+      : 'close-primary-navigation primary-navigation flex nav-indicators'
+  }
+  id="primary-navigation"
+>
+  {NAVBAR_ROUTES.map(({ exact, path, name, classname }, index) => (
+    <li
       key={name}
-      onClick={() => setShowLinks(false)}
+      className={splitLocation[1] === classname ? 'active' : ''}
     >
-      <span className="nav-number" aria-hidden="true">0{index}</span>
-      {name}
-    </Link>
-  );
-})}
-        </ul>
+      <Link
+        to={path}
+        className="navlink uppercase letter-spacing-2 ff-sans-cond nav-text text-white"
+        onClick={() => setShowLinks(false)}
+      >
+        <span className="nav-number" aria-hidden="true">0{index}</span>
+        {name}
+      </Link>
+    </li>
+  ))}
+</ul>
       </nav>
     </NavContainer>
   );
@@ -238,4 +238,5 @@ const NavContainer = styled.nav`
 `;
 
 export default Navbar;
+
 
