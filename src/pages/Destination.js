@@ -85,7 +85,7 @@ const Destination = ({ destinations }) => {
                     setPage([i, i - page]);
                   }}
                 >
-                  <h4>{name}</h4>
+                  {name}
                 </Tab>
               );
             })}

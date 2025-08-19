@@ -155,17 +155,20 @@ const NavContainer = styled.nav`
   margin-right: 12px;
   }
 
-  .change {
-    .bar1 {
-      transform: rotate(-45deg) translate(-2px, 10px);
-    }
-    .bar2 {
-      opacity: 0;
-    }
-    .bar3 {
-      transform: rotate(45deg) translate(-2px, -10px);
-    }
+
+.change {
+  .bar1 {
+    transform: rotate(45deg) translate(5px, 8px);
+    transform-origin: center;
   }
+  .bar2 {
+    opacity: 0;
+  }
+  .bar3 {
+    transform: rotate(-45deg) translate(5px, -8px);
+    transform-origin: center;
+  }
+}
 
   @media (min-width: 768px) {
     justify-content: space-between;
